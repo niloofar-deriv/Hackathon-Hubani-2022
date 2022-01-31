@@ -24,152 +24,186 @@ const Home = () => {
   });
   return ( 
     <div className='wrapper'>
-      <h1>Hubani VCard Generator</h1>
-      <form onSubmit={vCardForm.handleSubmit}>
-      {/* <label htmlFor="email">Email Address</label> */}
-        <div>
-          <label>Your name:</label>
-          <input
-            id="first_name"
-            name="first_name"
-            type="text"
-            placeholder="First name"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.first_name}
-          />
-          <input
-            id="last_name"
-            name="last_name"
-            type="text"
-            placeholder="Last name"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.last_name}
-          />
-        </div>
-        <div>
-          <label>Contact:</label>
-          <input
-            id="mobile"
-            name="mobile"
-            type="tel"
-            placeholder="Mobile"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.mobile}
-          />
-          <div>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="Home phone"
-              onChange={vCardForm.handleChange}
-              value={vCardForm.values.phone}
-            />
-            <input
-              id="fax"
-              name="fax"
-              type="text"
-              placeholder="Fax"
-              onChange={vCardForm.handleChange}
-              value={vCardForm.values.fax}
-            />
+      <div className='form-content'>
+        <h1>Hubani VCard Generator</h1>
+        <form className='vcard-form' onSubmit={vCardForm.handleSubmit}>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.first_name}
+              />
+              <label>First name</label>
+            </div>
+            <div className='custom-input'>
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.last_name}
+              />
+              <label>Last name</label>
+            </div>
           </div>
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="E-mail"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.email}
-          />
-        </div>
-        <div>
-          <label>Company:</label>
-          <input
-            id="company"
-            name="company"
-            type="text"
-            placeholder="Company"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.company}
-          />
-          <input
-            id="your_job"
-            name="your_job"
-            type="text"
-            placeholder="Your job"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.your_job}
-          />
-        </div>
-        <div>
-          <label>Street:</label>
-          <input
-            id="street"
-            name="street"
-            type="text"
-            placeholder="Street"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.email}
-          />
-        </div>
-        <div>
-          <label>City:</label>
-          <input
-            id="city"
-            name="city"
-            type="text"
-            placeholder="City"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.city}
-          />
-          <input
-            id="zip"
-            name="zip"
-            type="text"
-            placeholder="Zip"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.zip}
-          />
-        </div>
-        <div>
-          <label>State:</label>
-          <input
-            id="state"
-            name="state"
-            type="text"
-            placeholder="State"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.state}
-          />
-        </div>
-        <div>
-          <label>Country:</label>
-          <input
-            id="country"
-            name="country"
-            type="text"
-            placeholder="Country"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.country}
-          />
-        </div>
-        <div>
-          <label>Website:</label>
-          <input
-            id="website"
-            name="website"
-            type="text"
-            placeholder="Website"
-            onChange={vCardForm.handleChange}
-            value={vCardForm.values.website}
-          />
-        </div>
-        <button type="submit">Generate QR</button>
-      </form>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="mobile"
+                name="mobile"
+                type="tel"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.mobile}
+              />
+              <label>Mobile</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.phone}
+              />
+              <label>Phone</label>
+            </div>
+            <div className='custom-input'>
+              <input
+                id="fax"
+                name="fax"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.fax}
+              />
+              <label>Fax</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.email}
+              />
+              <label>Email</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.company}
+              />
+              <label>Company</label>
+            </div>
+            <div className='custom-input'>
+              <input
+                id="your_job"
+                name="your_job"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.your_job}
+              />
+              <label>Your job</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="street"
+                name="street"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.email}
+              />
+              <label>Street</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="city"
+                name="city"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.city}
+              />
+              <label>City</label>
+            </div>
+            <div className='custom-input'>
+              <input
+                id="zip"
+                name="zip"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.zip}
+              />
+              <label>Zip code</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="state"
+                name="state"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.state}
+              />
+              <label>State</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="country"
+                name="country"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.country}
+              />
+              <label>Country</label>
+            </div>
+          </div>
+          <div className='inputs-container'>
+            <div className='custom-input'>
+              <input
+                id="website"
+                name="website"
+                type="text"
+                placeholder=" "
+                onChange={vCardForm.handleChange}
+                value={vCardForm.values.website}
+              />
+              <label>Website</label>
+            </div>
+          </div>
+          <button type="submit">Generate QR</button>
+        </form>
+      </div>
     </div>
   );
 }
