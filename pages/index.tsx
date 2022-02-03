@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import QRCode from 'qrcode.react'
 
 const Home = () => {
   const vCardForm = useFormik({
@@ -24,6 +25,7 @@ const Home = () => {
   });
   return ( 
     <div className='wrapper'>
+      <QRCode value="http://facebook.github.io/react/" />
       <div className='form-content'>
         <h1>Hubani VCard Generator</h1>
         <form className='vcard-form' onSubmit={vCardForm.handleSubmit}>
