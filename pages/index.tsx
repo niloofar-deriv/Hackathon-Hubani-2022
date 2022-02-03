@@ -34,7 +34,7 @@ const Home = () => {
         <div className='qr-modal'>
           <h2>Your QR code is generated</h2>
           <div className='qr-code'>
-            <QRCode value='this is a test and it works!!' />
+            <QRCode value='this is a test and it works!!' size={165} />
           </div>
           <div className='button-container'>
             <button onClick={() => setModalState('none')}>Close</button>

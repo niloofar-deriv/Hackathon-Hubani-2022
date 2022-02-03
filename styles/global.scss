@@ -62,6 +62,9 @@ a {
     text-align: center;
     .qr-code {
       padding: 100px 0;
+      canvas {
+        border: 10px solid white;
+      }
     }
   }
 }
