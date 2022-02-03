@@ -20,6 +20,52 @@ a {
   box-sizing: border-box;
 }
 
+.button-container {
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  button {
+      position: relative;
+      background: #B86200;
+      width: auto;
+      height: auto;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-bottom: 2px solid #944F00;
+      transition: all 0.3s;
+      top: 0;
+    &:hover {
+      background: #944F00;
+      border-bottom: 0px solid hsl(32, 100%, 29%);
+      top: 2px;
+    }
+  }
+}
+
+.qr-modal-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color: rgba(21, 26, 36, 0.9);
+  .qr-modal {
+    text-align: center;
+    .qr-code {
+      padding: 100px 0;
+    }
+  }
+}
+
 .wrapper {
   width: 360px;
   margin: 0 auto;
