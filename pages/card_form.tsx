@@ -27,6 +27,15 @@ const vCardForm = useFormik({
 
 const {handleChange, handleSubmit, values} = vCardForm;
 
+const handleTellChange = e => {
+  e.target.setCustomValidity('');
+  handleChange(e);
+}
+
+const onTellInvalid = e => {
+  e.target.setCustomValidity('Use +0123456789');
+}
+
     return(
         <form className='vcard-form' onSubmit={handleSubmit}>
             <div className='inputs-container'>
@@ -60,8 +69,10 @@ const {handleChange, handleSubmit, values} = vCardForm;
                   name="mobile"
                   type="tel"
                   placeholder=" "
-                  onChange={handleChange}
+                  onChange={handleTellChange}
+                  onInvalid={onTellInvalid}
                   value={values.mobile}
+                  pattern="^[0-9-+\s()]*$"
                 />
                 <label>Mobile</label>
               </div>
@@ -73,8 +84,10 @@ const {handleChange, handleSubmit, values} = vCardForm;
                   name="phone"
                   type="tel"
                   placeholder=" "
-                  onChange={handleChange}
+                  onChange={handleTellChange}
+                  onInvalid={onTellInvalid}
                   value={values.phone}
+                  pattern="^[0-9-+\s()]*$"
                 />
                 <label>Phone</label>
               </div>
@@ -82,10 +95,12 @@ const {handleChange, handleSubmit, values} = vCardForm;
                 <input
                   id="fax"
                   name="fax"
-                  type="text"
+                  type="tel"
                   placeholder=" "
-                  onChange={handleChange}
+                  onChange={handleTellChange}
+                  onInvalid={onTellInvalid}
                   value={values.fax}
+                  pattern="^[0-9-+\s()]*$"
                 />
                 <label>Fax</label>
               </div>
@@ -195,7 +210,7 @@ const {handleChange, handleSubmit, values} = vCardForm;
                 <input
                   id="website"
                   name="website"
-                  type="text"
+                  type="url"
                   placeholder=" "
                   onChange={handleChange}
                   value={values.website}
