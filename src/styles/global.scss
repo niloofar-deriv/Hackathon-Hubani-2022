@@ -9,48 +9,14 @@ body {
 
 h1 {
   color: #1e252c;
-  font-size: xx-large;
-  font-weight: bold;
+  font-size: 30px;
 }
 
-.container {
-  padding: 40px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100vh;
+h2 {
+  color: #ffff;
+  font-size: 26px;
+  line-height: 40px;
 }
-
-.hubani {
-  color: #1c82ad;
-}
-
-.copyright {
-  color: #1e252c;
-  font-size: 18px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 a {
   color: inherit;
@@ -61,31 +27,23 @@ a {
   box-sizing: border-box;
 }
 
-.button-container {
-  position: relative;
-  height: 50px;
+.container {
+  padding: 50px;
   display: flex;
-  justify-content: center;
-  button {
-      position: relative;
-      background: #B86200;
-      width: auto;
-      height: auto;
-      font-size: 20px;
-      padding: 10px;
-      border-radius: 5px;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-bottom: 2px solid #944F00;
-      transition: all 0.3s;
-      top: 0;
-    &:hover {
-      background: #944F00;
-      border-bottom: 0px solid hsl(32, 100%, 29%);
-      top: 2px;
-    }
-  }
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hubani {
+  color: #1c82ad;
+  font-weight: bold;
+}
+
+.text {
+  color: #1e252c;
+  font-size: 16px;
 }
 
 .qr-modal-wrapper {
@@ -102,7 +60,7 @@ a {
   .qr-modal {
     text-align: center;
     .qr-code {
-      padding: 100px 0;
+      padding: 50px 0 80px;
       canvas {
         border: 10px solid white;
       }
@@ -110,80 +68,79 @@ a {
   }
 }
 
-.wrapper {
-  width: 360px;
-  margin: 0 auto;
-  @media only screen and (min-width: 360px) {
-    width: 100%;
-  }
-  @media only screen and (min-width: 768px) {
-    width: 768px;
-  }
-  .form-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #263042;
-    margin-bottom: 50px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 3px 3px 4px #0f1012;
-    .vcard-form {
-      width: 360px;
-      .inputs-container {
-        width: 100%;
-        display: flex;
-        position: relative;
-        .custom-input {
-          width: 100%;
-          label {
-            pointer-events: none;
-          }
-        }
-      }
-      .input-wraper {
-        position: relative;
-        height: 30px;
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        input[type="url"]:focus,
-        input[type="text"]:not(:placeholder-shown),
-        input[type="email"]:not(:placeholder-shown),
-        input[type="url"]:not(:placeholder-shown),
-        input[type="tel"]:not(:placeholder-shown) {
-          &~label {
-            top: -20px;
-            margin-left: 0;
-          }
-        }
-        input {
-          width: 100%;
-          padding: 5px;
-          position: absolute;
-          border: none;
-          background-color: transparent;
-          color: #EBE8E4;
-        }
-      }
-      label {
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left: 10px;
-        transition: all 0.2s;
-        color: #E9F2FD;
-      }
+.button-container {
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  button {
+      position: relative;
+      background: #1c82ad;
+      width: 250px;
+      height: auto;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-bottom: 2px solid #1c82ad;
+      transition: all 0.3s;
+      top: 0;
+    &:hover {
+      background: #1c82ad;
+      border-bottom: 0px solid hsl(207, 88%, 55%);
+      top: 2px;
     }
   }
 }
 
+label {
+  font-weight: bold;
+}
+
 .input-wraper{
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  border-bottom: 2px solid #E9F2FD;
-  margin: 20px 10px;
+  margin-top: 18px;
+  align-items: center;
+}
+
+.label-wraper {
+  width: 80px;
+}
+
+input {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  height: 30px;
+  font-size: 16px;
+  width: 60%;
+  margin-right: 5px;
+}
+
+.generate-QR-code {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  button {
+    position: relative;
+    background: #1c82ad;
+    height: auto;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s;
+    top: 0;
+    &:hover {
+      background: #1c82ad;
+      border-bottom: 0px solid hsl(207, 88%, 55%);
+      top: 2px;
+    }
+  }
 }
