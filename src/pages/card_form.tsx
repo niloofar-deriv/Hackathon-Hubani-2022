@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import Input from './input';
 
 const CardForm = ({setQrValue, setModalState}) => {
 const vCardForm = useFormik({
@@ -39,184 +40,38 @@ const onTellInvalid = e => {
     return(
         <form className='vcard-form' onSubmit={handleSubmit}>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="first_name"
-                  name="first_name"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.first_name}
-                />
-                <label>First name</label>
-              </div>
-              <div className='custom-input'>
-                <input
-                  id="last_name"
-                  name="last_name"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.last_name}
-                />
-                <label>Last name</label>
-              </div>
+            <Input handleChange={handleChange} id='first_name' label='First name' type="text" value={values.first_name} />
+              <Input handleChange={handleChange} id='last_name' label='Last name' type="text" value={values.last_name} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="mobile"
-                  name="mobile"
-                  type="tel"
-                  placeholder=" "
-                  onChange={handleTellChange}
-                  onInvalid={onTellInvalid}
-                  value={values.mobile}
-                  pattern="^[0-9-+\s()]*$"
-                />
-                <label>Mobile</label>
-              </div>
+            <Input handleChange={handleTellChange} id='mobile' label='Mobile' type="tel" value={values.mobile} pattern="^[0-9-+\s()]*$" onInvalid={onTellInvalid} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder=" "
-                  onChange={handleTellChange}
-                  onInvalid={onTellInvalid}
-                  value={values.phone}
-                  pattern="^[0-9-+\s()]*$"
-                />
-                <label>Phone</label>
-              </div>
-              <div className='custom-input'>
-                <input
-                  id="fax"
-                  name="fax"
-                  type="tel"
-                  placeholder=" "
-                  onChange={handleTellChange}
-                  onInvalid={onTellInvalid}
-                  value={values.fax}
-                  pattern="^[0-9-+\s()]*$"
-                />
-                <label>Fax</label>
-              </div>
+            <Input handleChange={handleTellChange} id='phone' label='Phone' type="tel" value={values.phone} pattern="^[0-9-+\s()]*$" onInvalid={onTellInvalid} />
+            <Input handleChange={handleTellChange} id='fax' label='Fax' type="tel" value={values.fax} pattern="^[0-9-+\s()]*$" onInvalid={onTellInvalid} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.email}
-                />
-                <label>Email</label>
-              </div>
+            <Input handleChange={handleChange} id='email' label='Email' type="email" value={values.email} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="company"
-                  name="company"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.company}
-                />
-                <label>Company</label>
-              </div>
-              <div className='custom-input'>
-                <input
-                  id="your_job"
-                  name="your_job"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.your_job}
-                />
-                <label>Your job</label>
-              </div>
+            <Input handleChange={handleChange} id='company' label='Company' type="text" value={values.company} />
+            <Input handleChange={handleChange} id='your_job' label='Your job' type="text" value={values.your_job} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="street"
-                  name="street"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.street}
-                />
-                <label>Street</label>
-              </div>
+            <Input handleChange={handleChange} id='street' label='Street' type="text" value={values.street} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="city"
-                  name="city"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.city}
-                />
-                <label>City</label>
-              </div>
-              <div className='custom-input'>
-                <input
-                  id="zip"
-                  name="zip"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.zip}
-                />
-                <label>Zip code</label>
-              </div>
+            <Input handleChange={handleChange} id='city' label='City' type="text" value={values.city} />
+            <Input handleChange={handleChange} id='zip' label='Zip code' type="text" value={values.zip} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="state"
-                  name="state"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.state}
-                />
-                <label>State</label>
-              </div>
+            <Input handleChange={handleChange} id='state' label='State' type="text" value={values.state} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="country"
-                  name="country"
-                  type="text"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.country}
-                />
-                <label>Country</label>
-              </div>
+            <Input handleChange={handleChange} id='country' label='Country' type="text" value={values.country} />
             </div>
             <div className='inputs-container'>
-              <div className='custom-input'>
-                <input
-                  id="website"
-                  name="website"
-                  type="url"
-                  placeholder=" "
-                  onChange={handleChange}
-                  value={values.website}
-                />
-                <label>Website</label>
-              </div>
+            <Input handleChange={handleChange} id='website' label='Website' type="url" value={values.website} />
             </div>
             <div className='button-container'>
               <button type="submit">Generate QR</button>
