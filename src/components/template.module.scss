@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 40%;
+    background-color: #fafafa;
+    border-radius: 4px;
+    height: 400px;
+    box-shadow: 0 20px 13px rgb(0 0 0 / 0.03);
+    overflow: hidden;
+}
+
+.newCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    background-color: #fafafa;
+    border-radius: 4px;
+    height: 400px;
+    box-shadow: 0 20px 13px rgb(0 0 0 / 0.03);
+    overflow: hidden;
+}
