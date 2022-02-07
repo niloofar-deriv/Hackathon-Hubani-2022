@@ -1,11 +1,11 @@
 import React from 'react';
-import CardForm from './card_form'
-import QRModal from './qr_modal'
+import CardForm from './card_form';
+import QRModal from './qr_modal';
+import 'regenerator-runtime/runtime';
 
 const Home = () => {
   const [modal_state, setModalState] = React.useState('none');
   const [qr_value, setQrValue] = React.useState('');
-
 
   return ( 
     <div>
