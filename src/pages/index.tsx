@@ -6,7 +6,6 @@ const Home = () => {
   const [modal_state, setModalState] = React.useState('none');
   const [qr_value, setQrValue] = React.useState('');
 
-
   return ( 
     <div>
       <div className='wrapper'>

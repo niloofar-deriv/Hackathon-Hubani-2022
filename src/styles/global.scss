@@ -101,10 +101,9 @@ a {
           }
         }
       }
-      .custom-input {
+      .input-wraper {
         position: relative;
         height: 30px;
-        margin: 20px 10px;
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="tel"]:focus,
@@ -122,9 +121,7 @@ a {
           width: 100%;
           padding: 5px;
           position: absolute;
-          z-index: 1;
           border: none;
-          border-bottom: 2px solid #E9F2FD;
           background-color: transparent;
           color: #EBE8E4;
         }
@@ -140,4 +137,12 @@ a {
       }
     }
   }
+}
+
+.input-wraper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 2px solid #E9F2FD;
+  margin: 20px 10px;
 }
