@@ -11,7 +11,7 @@ type TemplateProps = {
 const Template: FC<TemplateProps> = ({ children, brand_name, website, generate_qr_code }) => {
     return (
         <div className={styles.container}>
-            <div className={styles.card_back}>
+            <div className={`${styles.card_back} margin`}>
                 <div className={styles.line} />
                 <div className={styles.brand_container}>
                     <span className={styles.brand}>{brand_name}</span>
@@ -20,7 +20,7 @@ const Template: FC<TemplateProps> = ({ children, brand_name, website, generate_q
                 <div className={styles.line} />
             </div>
 
-            <div className={styles.card_front}>
+            <div className={`${styles.card_front} margin`}>
                 <div className={styles.brand_section}>
                     <div className={styles.line} />
                     <div className={styles.brand_container}>

@@ -55,11 +55,7 @@ const InformationForm: FC<InformationFormProps> = ({ is_submit_trigger, setQrVal
 
   return (
     <form onSubmit={handleSubmit}>
-      {
-        inputs.map(items => {
-          return <Input key={items.id} {...items} />
-        })
-      }
+      {inputs.map(items => <Input key={items.id} {...items} />)}
     </form>
   );
 };

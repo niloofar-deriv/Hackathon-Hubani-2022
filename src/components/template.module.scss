@@ -3,17 +3,34 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    flex-direction: column-reverse;
+    @media (min-width: 1600px) {
+        flex-direction: row;
+    }
 }
 
 .card {
-    width: 40%;
+    width: 90%;
     height: 400px;
     overflow: hidden;
     border-radius: 4px;
     box-shadow: 0 20px 13px rgb(0 0 0 / 0.03);
-    display: flex;
     align-items: center;
     justify-content: space-between;
+    display: none;
+
+    @media (min-width: 750px) {
+        display: flex;
+    }
+    @media (min-width: 1000px) {
+        width: 70%;
+    }
+    @media (min-width: 1300px) {
+        width: 50%;
+    }
+    @media (min-width: 1600px) {
+        width: 40%;
+    }
 }
 
 .card_back {
@@ -55,9 +72,12 @@
 
 .brand_section {
     @extend .card_back;
-    width: 45%;
+    width: 60%;
     height: 100%;
     border-right: 5px solid #1c82ad;
+    @media (min-width: 1600px) {
+        width: 45%;
+    }
 }
 
 .form_container {

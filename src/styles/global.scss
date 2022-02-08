@@ -145,3 +145,10 @@ input {
     }
   }
 }
+
+.margin {
+  margin-top: 50px;
+  @media (min-width: 1600px) {
+      margin-top: 0;
+  }
+}
