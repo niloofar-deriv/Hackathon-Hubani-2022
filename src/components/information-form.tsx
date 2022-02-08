@@ -1,12 +1,12 @@
-import { FC, useEffect } from 'react';
+import { Dispatch, FC, useEffect } from 'react';
 import { useFormik } from 'formik';
 import Input from './input';
 
 type InformationFormProps = {
   is_submit_trigger: boolean
-  setModalState: any
-  setQrValue: any
-  setIsSubmitTrigger: any
+  setModalState: Dispatch<React.SetStateAction<string>>
+  setQrValue: Dispatch<React.SetStateAction<any>>
+  setIsSubmitTrigger: Dispatch<React.SetStateAction<boolean>>
 }
 
 const InformationForm: FC<InformationFormProps> = ({ is_submit_trigger, setQrValue, setModalState, setIsSubmitTrigger }) => {
