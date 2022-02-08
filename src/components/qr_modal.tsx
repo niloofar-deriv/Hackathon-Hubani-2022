@@ -1,8 +1,9 @@
+import { FormType } from 'pages';
 import QRCode from 'qrcode.react';
 import { Dispatch, FC } from 'react';
 
 type QRModalTypes = {
-  qr_value: string,
+  qr_value: FormType
   setModalState: Dispatch<React.SetStateAction<string>>
   modal_state: string
 }

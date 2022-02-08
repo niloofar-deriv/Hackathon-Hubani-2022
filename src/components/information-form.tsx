@@ -1,12 +1,12 @@
-import { Dispatch, FC, useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { useFormik } from 'formik';
 import Input from './input';
 
 type InformationFormProps = {
-  is_submit_trigger: boolean,
-  setModalState: Dispatch<React.SetStateAction<string>>
-  setQrValue: Dispatch<React.SetStateAction<string>>
-  setIsSubmitTrigger: Dispatch<React.SetStateAction<boolean>>
+  is_submit_trigger: boolean
+  setModalState: any
+  setQrValue: any
+  setIsSubmitTrigger: any
 }
 
 const InformationForm: FC<InformationFormProps> = ({ is_submit_trigger, setQrValue, setModalState, setIsSubmitTrigger }) => {
@@ -28,8 +28,8 @@ const InformationForm: FC<InformationFormProps> = ({ is_submit_trigger, setQrVal
 
   const { handleChange, handleSubmit, values } = vCardForm;
 
-  useEffect(()=>{
-    if(is_submit_trigger){
+  useEffect(() => {
+    if (is_submit_trigger) {
       handleSubmit();
       setIsSubmitTrigger(false);
     }
