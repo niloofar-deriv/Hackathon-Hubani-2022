@@ -70,7 +70,9 @@ const Input: FC<InputProps> = ({ label, id, type, value, handleChange, ...props 
                 value={input_text}
                 {...props}
             />
-            <Image id={id} width="20" height="20" src={listening && id === input_id ? Microphone : GoogleMic} alt='listening' onMouseDown={onMouseDown} onMouseUp={onMouseUp} />
+            <div style={{ flexShrink: 0 }}>
+                <Image id={id} width="20" height="20" src={listening && id === input_id ? Microphone : GoogleMic} alt='listening' onMouseDown={onMouseDown} onMouseUp={onMouseUp} />
+            </div>
         </div>
     )
 }

@@ -31,10 +31,29 @@ a {
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-direction: column;
   padding: 40px;
   min-height: 100vh;
+  @media (min-width: 750px) {
+    justify-content: space-between;
+  }
+}
+
+form {
+  min-width: 300px;
+  padding-top: 40px;
+  @media (min-width: 750px) {
+    padding: 0;
+  }
+}
+
+.mobile {
+  width: 100%;
+  margin-bottom: 40px;
+  @media (min-width: 750px) {
+    display: none;
+    margin-bottom: 0;
+  }
 }
 
 .hubani {
@@ -102,23 +121,26 @@ label {
 
 .input-wraper{
   display: flex;
-  margin-top: 18px;
+  margin-top: 20px;
   align-items: center;
+  width: 100%;
 }
 
 .label-wraper {
   width: 80px;
+  flex-shrink: 0;
 }
 
 input {
   border: none;
+  background-color: transparent;
+  height: 30px;
+  font-size: 16px;
+  width: 100%;
+  margin-right: 5px;
   &:focus {
     outline: none;
   }
-  height: 30px;
-  font-size: 16px;
-  width: 60%;
-  margin-right: 5px;
 }
 
 .generate-QR-code {
@@ -138,16 +160,22 @@ input {
     border: none;
     transition: all 0.3s;
     top: 0;
+    width: 100%;
     &:hover {
       background: #1c82ad;
       border-bottom: 0px solid hsl(207, 88%, 55%);
       top: 2px;
     }
+    @media (min-width: 750px) {
+      width: auto;
+    }
   }
 }
 
 .margin {
-  margin-top: 50px;
+  @media (min-width: 750px) {
+    margin-top: 50px;
+  }
   @media (min-width: 1600px) {
       margin-top: 0;
   }

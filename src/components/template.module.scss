@@ -10,17 +10,15 @@
 }
 
 .card {
-    width: 90%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 4px;
-    box-shadow: 0 20px 13px rgb(0 0 0 / 0.03);
-    align-items: center;
-    justify-content: space-between;
-    display: none;
-
     @media (min-width: 750px) {
+        width: 90%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 4px;
+        box-shadow: 0 20px 13px rgb(0 0 0 / 0.03);
         display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     @media (min-width: 1000px) {
         width: 70%;
@@ -37,11 +35,17 @@
     @extend .card;
     background-color: #262d37;
     flex-direction: column;
+    display: none;
+    @media (min-width: 750px) {
+        display: flex;
+    }
 }
 
 .card_front {
     @extend .card;
-    background-color: #fafafa;
+    @media (min-width: 750px) {
+        background-color: #fafafa;
+    }
 }
 
 .line {
@@ -75,6 +79,10 @@
     width: 60%;
     height: 100%;
     border-right: 5px solid #1c82ad;
+    display: none;
+    @media (min-width: 750px) {
+        display: flex;
+    }
     @media (min-width: 1600px) {
         width: 45%;
     }
@@ -82,5 +90,7 @@
 
 .form_container {
     width: 100%;
-    padding: 40px;
+    @media (min-width: 750px) {
+        padding: 40px;
+    }
 }

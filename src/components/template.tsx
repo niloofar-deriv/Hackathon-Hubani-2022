@@ -34,6 +34,10 @@ const Template: FC<TemplateProps> = ({ children, brand_name, website, generate_q
                 <div className={styles.form_container}>
                     {children}
                 </div>
+
+                <div className='mobile'>
+                    {generate_qr_code}
+                </div>
             </div>
         </div>
     )
