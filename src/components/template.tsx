@@ -1,5 +1,4 @@
 import { FC, ReactNode } from 'react';
-import InformationForm from './information-form';
 import styles from './template.module.scss';
 
 type TemplateProps = {

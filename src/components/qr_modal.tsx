@@ -2,7 +2,7 @@ import QRCode from 'qrcode.react';
 import { Dispatch, FC } from 'react';
 
 type QRModalTypes = {
-  qr_value: any,
+  qr_value: string,
   setModalState: Dispatch<React.SetStateAction<string>>
   modal_state: string
 }
